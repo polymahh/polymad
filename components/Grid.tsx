@@ -1,16 +1,12 @@
-import { gridItems } from "@/data";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { BackgroundGradientAnimation } from "./ui/GradientBg";
 import Image from "next/image";
 import GridGlobe from "./ui/GridGlobe";
 import MagicButton from "./MagicButton";
-import { IoCopyOutline } from "react-icons/io5";
-import { TiMessages } from "react-icons/ti";
 import { TbMessage } from "react-icons/tb";
 
 const Grid = () => {
     return (
-        <section id="about">
+        <section id="about" className="mb-20">
             <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto">
                 {/* first item in the grid */}
                 <div
@@ -32,7 +28,7 @@ const Grid = () => {
 
                         <div className="group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 justify-center md:justify-start lg:justify-center">
                             <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-foreground z-10 whitespace-nowrap">
-                                What are you working on?
+                                🚧 What are you working on?
                             </div>
                             <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
                                 Currently building an open source project
@@ -50,8 +46,8 @@ const Grid = () => {
                 >
                     <div className={`h-full `}>
                         <div className="group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10">
-                            <div className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}>
-                                I&apos;m very flexible with time zone communications
+                            <div className={`font-sans text-lg lg:text-2xl max-w-96 font-bold z-10`}>
+                                <span>🕒</span> I&apos;m very flexible with time zone communications
                             </div>
                             <GridGlobe />
                         </div>

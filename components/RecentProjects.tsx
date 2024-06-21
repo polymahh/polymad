@@ -23,9 +23,7 @@ export const RecentProjects = () => {
 
     return (
         <div className="py-20 flex flex-col items-center">
-            <h1 className="heading">
-                A small selection of <span className="text-purple">recent projects</span>
-            </h1>
+            <h1 className="heading">👷‍♂️🛠️ recent projects</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2   py-10 mt-10">
                 {projects.map((item, idx) => (
@@ -91,10 +89,11 @@ export const RecentProjects = () => {
                                                     key={index}
                                                     className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                                                     style={{
-                                                        transform: `translateX(-${5 * index + 2}px)`,
+                                                        transform: `translateX(-${5 * index}px)`,
                                                     }}
                                                 >
-                                                    <img src={icon} alt="icon5" className="p-2" />
+                                                    {/* <img src={icon} alt="icon5" className="p-2" /> */}
+                                                    <Image src={icon} alt="icon5" className="p-2" fill />
                                                 </div>
                                             ))}
                                         </div>

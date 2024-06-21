@@ -37,11 +37,11 @@ const Hero = () => {
             </div>
 
             <div className="flex justify-center relative my-20 z-10">
-                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+                <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[50vw] flex flex-col items-center justify-center">
                     <Link
                         href="https://junior-prep.com"
                         target="_blank"
-                        className="text-sm text-center text-blue-100  bg-fuchsia-700 whitespace-nowrap px-4 py-1 rounded-full"
+                        className="text-xs sm:text-sm text-center text-blue-100  bg-fuchsia-700 whitespace-nowrap px-2 sm:px-4 py-1 rounded-full"
                     >
                         👋 checkout my OPEN SOURCE project --&gt;
                     </Link>
@@ -53,20 +53,13 @@ const Hero = () => {
                      */}
                     <TextGenerateEffect
                         words="Innovative User Experiences for the Modern Web."
-                        className="text-center text-[40px] md:text-5xl lg:text-6xl"
+                        className="text-center text-4xl md:text-5xl "
                     />
 
-                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+                    <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg ">
                         Hi! I&apos;m Othmane a Frontend Developer 👨‍💻 based in Morocco.
                     </p>
                 </div>
-            </div>
-            <div className="flex justify-center">
-                <TextRevealCard
-                    text="Simplified for Mobile"
-                    revealText="Rich for Desktop"
-                    className="bg-transparent border-none text-center"
-                ></TextRevealCard>
             </div>
         </div>
     );

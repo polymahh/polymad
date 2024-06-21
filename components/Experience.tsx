@@ -1,152 +1,180 @@
+"use client";
 import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
 import { TracingBeam } from "./ui/tracing-beam";
-import Image from "next/image";
 import { twMerge } from "tailwind-merge";
+import Image from "next/image";
+import { StickyScroll } from "./ui/sticky-scroll-reveal";
+
+const content = [
+    {
+        title: "Collaborative Editing",
+        description:
+            "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Collaborative Editing
+            </div>
+        ),
+    },
+    {
+        title: "Real time changes",
+        description:
+            "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+        content: (
+            <div className="h-full w-full  flex items-center justify-center text-white">
+                <Image
+                    src="/linear.webp"
+                    width={300}
+                    height={300}
+                    className="h-full w-full object-cover"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
+    },
+    {
+        title: "Version control",
+        description:
+            "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+                Version control
+            </div>
+        ),
+    },
+    {
+        title: "Running out of content",
+        description:
+            "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+        content: (
+            <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+                Running out of content
+            </div>
+        ),
+    },
+];
 
 const dummyContent = [
     {
-        title: "Lorem Ipsum Dolor Sit Amet",
+        title: "3WM Maroc ",
         description: (
             <>
                 <p>
-                    Sit duis est minim proident non nisi velit non consectetur. Esse adipisicing laboris consectetur
-                    enim ipsum reprehenderit eu deserunt Lorem ut aliqua anim do. Duis cupidatat qui irure cupidatat
-                    incididunt incididunt enim magna id est qui sunt fugiat. Laboris do duis pariatur fugiat Lorem aute
-                    sit ullamco. Qui deserunt non reprehenderit dolore nisi velit exercitation Lorem qui do enim culpa.
-                    Aliqua eiusmod in occaecat reprehenderit laborum nostrud fugiat voluptate do Lorem culpa officia
-                    sint labore. Tempor consectetur excepteur ut fugiat veniam commodo et labore dolore commodo
-                    pariatur.
+                    Working as a Frontend developer creating and integrating new pages and new features with html CSS
+                    and JavaScript/jQuery
                 </p>
-                <p>
-                    Dolor minim irure ut Lorem proident. Ipsum do pariatur est ad ad veniam in commodo id reprehenderit
-                    adipisicing. Proident duis exercitation ad quis ex cupidatat cupidatat occaecat adipisicing.
-                </p>
-                <p>
-                    Tempor quis dolor veniam quis dolor. Sit reprehenderit eiusmod reprehenderit deserunt amet laborum
-                    consequat adipisicing officia qui irure id sint adipisicing. Adipisicing fugiat aliqua nulla
-                    nostrud. Amet culpa officia aliquip deserunt veniam deserunt officia adipisicing aliquip proident
-                    officia sunt.
-                </p>
+                <h3 className="my-4 font-semibold">What i did:</h3>
+                <ul className="list-disc pl-4">
+                    <li>Developing new pages and optimizing existing code by refactoring and debugging.</li>
+                    <li>
+                        Quickly learning new and old technologies to adapt to the company&apos;s needs (jQuery,
+                        bootstrap, twig...)
+                    </li>
+                    <li>Working closely with the team to ensure the timely achievement of company objectives.</li>
+                </ul>
             </>
         ),
-        badge: "React",
-        image: "/jp-dashboard.webp.png",
+        badge: "Freelance  - 2023-02 / 2023-05",
+        // image: "/3wm-desktop.webp",
     },
     {
-        title: "Lorem Ipsum Dolor Sit Amet",
+        title: "Prifina - Liberty. Equality. Data.",
         description: (
             <>
                 <p>
-                    Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat deserunt cupidatat aute. Enim
-                    cillum dolor et nulla sunt exercitation non voluptate qui aliquip esse tempor. Ullamco ut sunt
-                    consectetur sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea velit id esse
-                    adipisicing deserunt amet dolore. Ipsum occaecat veniam commodo proident aliqua id ad deserunt dolor
-                    aliquip duis veniam sunt.
+                    Data mine is an open-source project to create a public facing directory website for Prifina dynamic
+                    data to easily find all types of data objects and attributes available for developers to create all
+                    kinds data apps.
                 </p>
-                <p>
-                    In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse veniam fugiat esse qui sint ad sunt
-                    reprehenderit do qui proident reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-                    cillum ut mollit.
-                </p>
+                <h3>What i did:</h3>
+                <ul>
+                    <li>
+                        Worked with a UI/UX designer to code the frontend of the project following Figma designs using
+                        Next.js and Chakra UI.
+                    </li>
+                    <li>
+                        Connected the website to the Prifina Notion database and made the website statically generated
+                        with a revalidation of 24 hours.
+                    </li>
+                    <li>
+                        This method makes the website very fast and also does not hit the API limit set by the Notion
+                        database, basically fetching the data once every day.
+                    </li>
+                    <li>Coded the sorting logic by search, categories, or status from scratch.</li>
+                </ul>
             </>
         ),
-        badge: "Changelog",
-        image: "/jp-dashboard.webp.png",
+        badge: "2022-11 / 2023-02 - Internship",
+        image: "/datamine-desktop.webp",
     },
     {
-        title: "Lorem Ipsum Dolor Sit Amet",
+        title: "seocomponent.com ",
         description: (
             <>
                 <p>
-                    Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat deserunt cupidatat aute. Enim
-                    cillum dolor et nulla sunt exercitation non voluptate qui aliquip esse tempor. Ullamco ut sunt
-                    consectetur sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea velit id esse
-                    adipisicing deserunt amet dolore. Ipsum occaecat veniam commodo proident aliqua id ad deserunt dolor
-                    aliquip duis veniam sunt.
+                    seocomponent.com is a collection of all types of technical SEO elements for websites so developers
+                    spend more time designing and building websites
                 </p>
+                <h3>What i did:</h3>
+                <ul>
+                    <li>
+                        Built new schema generators for various types of pages e.g.: Article, Event, Recipe, Job Posting
+                        and many more
+                    </li>
+                    <li>
+                        Optimized the code by creating new reusable components and tools so to make creation of new
+                        generators easier
+                    </li>
+                    <li>Establishing a new context to share states between components seamlessly</li>
+                </ul>
             </>
         ),
-        badge: "Launch Week",
-        image: "/jp-dashboard.webp.png",
+        badge: "2022-09 / 2022-11 - Freelance",
+        image: "/seocomponent-desktop.webp",
     },
 ];
 
 const Experience = () => {
     return (
-        <div className="py-20 w-full">
-            <h1 className="heading mb-10">
-                My <span className="text-purple">work experience</span>
-            </h1>
-
-            <TracingBeam className="px-6">
-                <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-                    {dummyContent.map((item, index) => (
-                        <div key={`content-${index}`} className="mb-10">
-                            <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-                                {item.badge}
-                            </h2>
-
-                            <p className={twMerge("text-xl mb-4")}>{item.title}</p>
-
-                            <div className="text-sm  prose prose-sm dark:prose-invert">
-                                {item?.image && (
-                                    <Image
-                                        src={item.image}
-                                        alt="blog thumbnail"
-                                        height="1000"
-                                        width="1000"
-                                        className="rounded-lg mb-10 object-cover"
-                                    />
-                                )}
-                                {item.description}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </TracingBeam>
-
-            {/* <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
-          <Button
-            key={card.id}
-            //   random duration will be fun , I think , may be not
-            duration={Math.floor(Math.random() * 10000) + 10000}
-            borderRadius="1.75rem"
-            style={{
-              //   add these two
-              //   you can generate the color from here https://cssgradient.io/
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-              // add this border radius to make it more rounded so that the moving border is more realistic
-              borderRadius: `calc(1.75rem* 0.96)`,
-            }}
-            // remove bg-white dark:bg-slate-900
-            className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
-          >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <img
-                src={card.thumbnail}
-                alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16"
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
-                </p>
-              </div>
-            </div>
-          </Button>
-        ))}
-      </div> */}
+        <div className="p-10 mb-48 static ">
+            <StickyScroll content={content} />
         </div>
     );
+    // return (
+    //     <div className="py-20 w-full">
+    //         <h1 className="heading mb-10">👷‍♂️💼 work experience</h1>
+
+    //         <TracingBeam className="pl-6">
+    //             <div className="max-w-2xl  antialiased pt-4 relative">
+    //                 {dummyContent.map((item, index) => (
+    //                     <div key={`content-${index}`} className=" py-6">
+    //                         <h2 className="bg-purple/20 text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+    //                             {item.badge}
+    //                         </h2>
+
+    //                         <p className={twMerge("text-xl mb-4 pl-4")}>{item.title}</p>
+
+    //                         <div className="text-sm pl-4 prose prose-sm dark:prose-invert">
+    //                             {item.description}
+    //                             {item?.image && (
+    //                                 <Image
+    //                                     src={item.image}
+    //                                     alt="blog thumbnail"
+    //                                     height="1000"
+    //                                     width="1000"
+    //                                     className="rounded-lg mt-10 object-cover"
+    //                                 />
+    //                             )}
+    //                         </div>
+    //                     </div>
+    //                 ))}
+    //             </div>
+    //         </TracingBeam>
+    //     </div>
+    // );
 };
 
 export default Experience;

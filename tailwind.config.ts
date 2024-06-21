@@ -45,6 +45,7 @@ const config = {
                     "300": "rgb(2, 3, 24)",
                 },
                 purple: "#CBACF9",
+                highlight: "hsl(var(--highlight))",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
