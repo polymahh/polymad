@@ -1,8 +1,8 @@
 export const navItems = [
-    { name: "About", link: "#about" },
-    { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
-    { name: "Contact", link: "#contact" },
+    // { name: "About", link: "#about" },
+    { name: "Projects", link: "projects" },
+    { name: "Experience", link: "experience" },
+    { name: "Contact", link: "mailto:otman.elkantaoui@gmail.com" },
 ];
 
 export const projects = [
@@ -25,18 +25,18 @@ export const projects = [
     {
         id: 3,
         title: "Architect Portfolio ",
-        des: "A beutifully designed portfolio for an architect. It's fully responsive and fully dynamic.",
+        des: "A beautifully designed portfolio for an architect. It's fully responsive and fully dynamic.",
         img: "/yassmina-portfolio.webp",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
         link: "/ui.aiimg.com",
     },
     {
         id: 4,
-        title: "Animated Apple Iphone 3D Website",
-        des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-        img: "/p4.svg",
+        title: "TubeGiffer - Youtube Gifs Generator",
+        des: "A fun personel project that helps users create clips from youtube videos without downloading the video",
+        img: "/tubegiffer.webp",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-        link: "/ui.apple.com",
+        link: "https://tubegiffer.vercel.app/",
     },
 ];
 

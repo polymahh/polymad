@@ -3,14 +3,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { projects } from "@/data";
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaArrowRight, FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
 
 export const RecentProjects = () => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
-        <div className="py-20 flex flex-col items-center">
+        <div id="projects" className="py-20 flex flex-col items-center">
             <h1 className="heading">👷‍♂️🛠️ recent projects</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2   py-10 mt-10">
@@ -97,6 +97,14 @@ export const RecentProjects = () => {
                     </Link>
                 ))}
             </div>
+            <Link
+                href="https://github.com/polymahh?tab=repositories"
+                target="_blank"
+                className="z-10 flex justify-center items-center"
+            >
+                <p className="flex lg:text-xl md:text-xs text-sm text-purple">View All</p>
+                <FaArrowRight className="ms-3" color="#CBACF9" />
+            </Link>
         </div>
     );
 };
