@@ -13,7 +13,7 @@ import Stack from "@/components/Stack";
 
 const Home = () => {
     return (
-        <main className="relative bg-background flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-2">
+        <main className="relative bg-background flex justify-center items-center flex-col mx-auto sm:px-10 px-2">
             <div className="max-w-7xl w-full">
                 <FloatingNav navItems={navItems} />
                 <Hero />

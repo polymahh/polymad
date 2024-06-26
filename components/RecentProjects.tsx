@@ -5,18 +5,6 @@ import { useState } from "react";
 import { projects } from "@/data";
 import { FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
-const items = [
-    {
-        title: "Tic-Tac-Toe",
-        description: "Play Tic-Tac-Toe with your friends",
-        link: "/projects/tic-tac-toe",
-    },
-    {
-        title: "Pomodoro",
-        description: "Countdo your time with pomodoro technique",
-        link: "/projects/pomodoro",
-    },
-];
 
 export const RecentProjects = () => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -31,6 +19,7 @@ export const RecentProjects = () => {
                         href={item?.link}
                         key={item?.link}
                         className="relative group  block p-2 lg:min-h-[35rem] h-[30rem]  max-w-[90vw] sm:max-w-[500px]"
+                        target="_blank"
                         onMouseEnter={() => setHoveredIndex(idx)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -92,7 +81,6 @@ export const RecentProjects = () => {
                                                         transform: `translateX(-${5 * index}px)`,
                                                     }}
                                                 >
-                                                    {/* <img src={icon} alt="icon5" className="p-2" /> */}
                                                     <Image src={icon} alt="icon5" className="p-2" fill />
                                                 </div>
                                             ))}

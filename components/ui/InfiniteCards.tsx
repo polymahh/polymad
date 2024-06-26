@@ -68,7 +68,7 @@ export const InfiniteMovingCards = ({
             ref={containerRef}
             className={cn(
                 // max-w-7xl to w-screen
-                "scroller relative z-20 max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller relative z-20 max-w-[95vw] overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
                 className
             )}
         >
@@ -87,7 +87,6 @@ export const InfiniteMovingCards = ({
                             <div className="relative z-20 my-6 mr-16 flex flex-row items-center">
                                 {/* add this div for the profile img */}
                                 <div className="relative border border-white/[.2] rounded-full bg-black lg:w-12 lg:h-12 w-8 h-8 me-4">
-                                    {/* <img src={icon} alt="icon5" className="p-2" /> */}
                                     <Image src={item.icon} alt="icon5" className="p-1" fill />
                                 </div>
                                 <span className="text-xl font-semibold leading-[1.6] text-white">{item.title}</span>

@@ -24,12 +24,11 @@ const content = [
         description:
             "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
         content: (
-            <div className="h-full w-full  flex items-center justify-center text-white">
+            <div className="h-full w-full relative  flex items-center justify-center text-white">
                 <Image
-                    src="/linear.webp"
-                    width={300}
-                    height={300}
-                    className="h-full w-full object-cover"
+                    src="/yassmina-portfolio.webp"
+                    fill
+                    className="h-full w-full object-contain"
                     alt="linear board demo"
                 />
             </div>
@@ -59,6 +58,82 @@ const content = [
 
 const dummyContent = [
     {
+        title: "Junior-Prep",
+        description: (
+            <>
+                <p>
+                    I initiated and led the development of junior-prep.com, an open-source platform designed to support
+                    junior web developers to practice interview questions, record your progress and find teams to
+                    collaborate with.
+                </p>
+                <h3 className="my-4 font-semibold">What i did:</h3>
+                <ul className="list-disc pl-4">
+                    <li>
+                        Full-Stack Development: Built a robust application using Next.js and integrated NextAuth for
+                        secure user authentication, providing a seamless and performant user experience.
+                    </li>
+                    <li>
+                        Database Management: Implemented and managed the database layer with Prisma, ensuring efficient
+                        data modeling and interactions.
+                    </li>
+                    <li>
+                        State Management: Employed React Query for data fetching and state management, optimizing
+                        client-server communication and improving application performance.
+                    </li>
+                </ul>
+            </>
+        ),
+        badge: "Founder  - 2023-12 / Present",
+        content: (
+            <div className="h-full w-full relative  flex items-center justify-center text-white">
+                <Image
+                    src="/jp-dashboard.webp.png"
+                    fill
+                    className="object-cover object-left-top"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
+    },
+    {
+        title: "IDURAR",
+        description: (
+            <>
+                <p>
+                    I had the opportunity to work on a challenging and impactful project focused on the development and
+                    enhancement of an Open Source ERP CRM system
+                </p>
+                <h3 className="my-4 font-semibold">What i did:</h3>
+                <ul className="list-disc pl-4">
+                    <li>
+                        I was responsible for ensuring that the application was accessible and fully functional across
+                        all screen sizes.
+                    </li>
+                    <li>
+                        I spearheaded the creation of a table component with a hook that improved user experience on
+                        various screen sizes and gave a decently accessible table for mobile.
+                    </li>
+                    <li>
+                        As a repository maintainer, I actively participated in the code review process, thoroughly
+                        assessing and testing community pull requests . This role provided me with a comprehensive
+                        understanding of Git and version control.
+                    </li>
+                </ul>
+            </>
+        ),
+        badge: "Internship  - 2023-07 / 2023-09",
+        content: (
+            <div className="h-full w-full relative  flex items-center justify-center text-white">
+                <Image
+                    src="/idurar-desktop.webp"
+                    fill
+                    className="object-cover object-left-top"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
+    },
+    {
         title: "3WM Maroc ",
         description: (
             <>
@@ -78,7 +153,11 @@ const dummyContent = [
             </>
         ),
         badge: "Freelance  - 2023-02 / 2023-05",
-        // image: "/3wm-desktop.webp",
+        content: (
+            <div className="h-full w-full relative  flex items-center justify-center text-white">
+                <Image src="/3wm-desktop.webp" fill className="object-cover object-left-top" alt="linear board demo" />
+            </div>
+        ),
     },
     {
         title: "Prifina - Liberty. Equality. Data.",
@@ -89,8 +168,8 @@ const dummyContent = [
                     data to easily find all types of data objects and attributes available for developers to create all
                     kinds data apps.
                 </p>
-                <h3>What i did:</h3>
-                <ul>
+                <h3 className="my-4 font-semibold">What i did:</h3>
+                <ul className="list-disc pl-4">
                     <li>
                         Worked with a UI/UX designer to code the frontend of the project following Figma designs using
                         Next.js and Chakra UI.
@@ -107,8 +186,17 @@ const dummyContent = [
                 </ul>
             </>
         ),
-        badge: "2022-11 / 2023-02 - Internship",
-        image: "/datamine-desktop.webp",
+        badge: "Internship - 2022-11 / 2023-02",
+        content: (
+            <div className="h-full w-full relative  flex items-center justify-center text-white">
+                <Image
+                    src="/datamine-desktop.webp"
+                    fill
+                    className="object-cover object-left-top"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
     },
     {
         title: "seocomponent.com ",
@@ -118,8 +206,8 @@ const dummyContent = [
                     seocomponent.com is a collection of all types of technical SEO elements for websites so developers
                     spend more time designing and building websites
                 </p>
-                <h3>What i did:</h3>
-                <ul>
+                <h3 className="my-4 font-semibold">What i did:</h3>
+                <ul className="list-disc pl-4">
                     <li>
                         Built new schema generators for various types of pages e.g.: Article, Event, Recipe, Job Posting
                         and many more
@@ -132,49 +220,27 @@ const dummyContent = [
                 </ul>
             </>
         ),
-        badge: "2022-09 / 2022-11 - Freelance",
-        image: "/seocomponent-desktop.webp",
+        badge: "Freelance - 2022-09 / 2022-11",
+        content: (
+            <div className="h-full w-full relative  flex items-center justify-center text-white">
+                <Image
+                    src="/seocomponent-desktop.webp"
+                    fill
+                    className="object-cover object-left-top"
+                    alt="linear board demo"
+                />
+            </div>
+        ),
     },
 ];
 
 const Experience = () => {
     return (
-        <div className="p-10 mb-48 static ">
-            <StickyScroll content={content} />
+        <div className=" mb-48 static ">
+            <h1 className="heading mb-20">👷‍♂️💼 work experience</h1>
+            <StickyScroll content={dummyContent} />
         </div>
     );
-    // return (
-    //     <div className="py-20 w-full">
-    //         <h1 className="heading mb-10">👷‍♂️💼 work experience</h1>
-
-    //         <TracingBeam className="pl-6">
-    //             <div className="max-w-2xl  antialiased pt-4 relative">
-    //                 {dummyContent.map((item, index) => (
-    //                     <div key={`content-${index}`} className=" py-6">
-    //                         <h2 className="bg-purple/20 text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-    //                             {item.badge}
-    //                         </h2>
-
-    //                         <p className={twMerge("text-xl mb-4 pl-4")}>{item.title}</p>
-
-    //                         <div className="text-sm pl-4 prose prose-sm dark:prose-invert">
-    //                             {item.description}
-    //                             {item?.image && (
-    //                                 <Image
-    //                                     src={item.image}
-    //                                     alt="blog thumbnail"
-    //                                     height="1000"
-    //                                     width="1000"
-    //                                     className="rounded-lg mt-10 object-cover"
-    //                                 />
-    //                             )}
-    //                         </div>
-    //                     </div>
-    //                 ))}
-    //             </div>
-    //         </TracingBeam>
-    //     </div>
-    // );
 };
 
 export default Experience;
