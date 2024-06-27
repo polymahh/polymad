@@ -66,7 +66,7 @@ export const StickyScroll = ({
                         {content.map((item, index) => (
                             <div key={item.title + index} className="my-20 relative">
                                 <motion.div
-                                    className=" absolute -top-10 -left-4 bg-accent text-white rounded-full px-2 mb-4 self-start"
+                                    className=" text-sm sm:text-base absolute -top-10 -left-4 bg-accent text-white rounded-full px-2 mb-4 self-start"
                                     initial={{
                                         opacity: 0,
                                     }}

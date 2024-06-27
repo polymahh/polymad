@@ -5,6 +5,8 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Link from "next/link";
 import { TextRevealCard, TextRevealCardDescription, TextRevealCardTitle } from "./ui/text-reveal-card";
+import { socialMedia } from "@/data";
+import { Icons } from "./icons";
 
 function Hero() {
     return (
@@ -59,6 +61,24 @@ function Hero() {
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg ">
                         Hi! I&apos;m Othmane a Frontend Developer 👨‍💻 based in Morocco.
                     </p>
+                </div>
+            </div>
+
+            <div className="flex mt-16  flex-col items-center">
+                <div className="flex items-center md:gap-3 gap-6">
+                    {socialMedia.map((item) => {
+                        const Icon = Icons[item.name as keyof typeof Icons];
+                        return (
+                            <Link
+                                href={item.link}
+                                target="_blank"
+                                key={item.name}
+                                className="w-12 h-12 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg text-white saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                            >
+                                {Icon ? <Icon /> : null}
+                            </Link>
+                        );
+                    })}
                 </div>
             </div>
         </div>

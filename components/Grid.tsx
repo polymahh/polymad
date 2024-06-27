@@ -90,21 +90,6 @@ const Grid = () => {
                                     otherClasses="!bg-[#161A31]"
                                 />
                             </div>
-                            <div className="flex items-center md:gap-3 gap-6 mx-auto mt-6">
-                                {socialMedia.map((item) => {
-                                    const Icon = Icons[item.name as keyof typeof Icons];
-                                    return (
-                                        <Link
-                                            href={item.link}
-                                            target="_blank"
-                                            key={item.name}
-                                            className="w-12 h-12 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg text-white saturate-180 bg-opacity-75 bg-black-200/50 rounded-lg border border-black-300"
-                                        >
-                                            {Icon ? <Icon /> : null}
-                                        </Link>
-                                    );
-                                })}
-                            </div>
                         </div>
                     </div>
                 </div>
