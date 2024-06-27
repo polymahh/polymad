@@ -3,6 +3,8 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import Image from "next/image";
+import Link from "next/link";
+import { Icons } from "./icons";
 
 const Footer = () => {
     return (
@@ -25,14 +27,19 @@ const Footer = () => {
             </div>
             <div className="flex mt-16  flex-col items-center">
                 <div className="flex items-center md:gap-3 gap-6">
-                    {socialMedia.map((info) => (
-                        <div
-                            key={info.id}
-                            className="w-12 h-12 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg text-white/60 saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
-                        >
-                            <Image src={info.img} alt="icons" width={30} height={30} />
-                        </div>
-                    ))}
+                    {socialMedia.map((item) => {
+                        const Icon = Icons[item.name as keyof typeof Icons];
+                        return (
+                            <Link
+                                href={item.link}
+                                target="_blank"
+                                key={item.name}
+                                className="w-12 h-12 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg text-white saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                            >
+                                {Icon ? <Icon /> : null}
+                            </Link>
+                        );
+                    })}
                 </div>
             </div>
         </footer>

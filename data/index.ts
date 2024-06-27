@@ -67,39 +67,6 @@ export const testimonials = [
     },
 ];
 
-export const companies = [
-    {
-        id: 1,
-        name: "cloudinary",
-        img: "/cloud.svg",
-        nameImg: "/cloudName.svg",
-    },
-    {
-        id: 2,
-        name: "appwrite",
-        img: "/app.svg",
-        nameImg: "/appName.svg",
-    },
-    {
-        id: 3,
-        name: "HOSTINGER",
-        img: "/host.svg",
-        nameImg: "/hostName.svg",
-    },
-    {
-        id: 4,
-        name: "stream",
-        img: "/s.svg",
-        nameImg: "/streamName.svg",
-    },
-    {
-        id: 5,
-        name: "docker.",
-        img: "/dock.svg",
-        nameImg: "/dockerName.svg",
-    },
-];
-
 export const workExperience = [
     {
         id: 1,
@@ -133,15 +100,38 @@ export const workExperience = [
 
 export const socialMedia = [
     {
-        id: 1,
+        name: "github",
+        link: "https://github.com/polymahh",
         img: "/git.svg",
     },
     {
-        id: 2,
+        name: "discord",
+        link: "https://discordapp.com/users/polymadd",
         img: "/twit.svg",
     },
     {
-        id: 3,
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/othmane-elkantaoui-356a91174/",
         img: "/link.svg",
     },
+];
+
+export const stack = [
+    "react",
+    "next.js",
+    "tailwindcss",
+    "typescript",
+    "HTML5",
+    "CSS3",
+    "redux",
+    "framer-motion",
+    "shadcn ui",
+    "chakra ui",
+    "ant design",
+    "jQuery",
+    "bootstrap",
+    "git",
+    "nodeJs",
+    // "expressJs",
+    "prisma",
 ];

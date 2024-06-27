@@ -3,6 +3,7 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import { Icons } from "../icons";
 
 export const InfiniteMovingCards = ({
     items,
@@ -11,10 +12,7 @@ export const InfiniteMovingCards = ({
     pauseOnHover = true,
     className,
 }: {
-    items: {
-        icon: string;
-        title: string;
-    }[];
+    items: string[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
     pauseOnHover?: boolean;
@@ -81,19 +79,24 @@ export const InfiniteMovingCards = ({
                     pauseOnHover && "hover:[animation-play-state:paused]"
                 )}
             >
-                {items.map((item, idx) => (
-                    <li className=" relative rounded-2xl  px-8  " key={idx}>
-                        <blockquote>
-                            <div className="relative z-20 my-6 mr-16 flex flex-row items-center">
-                                {/* add this div for the profile img */}
-                                <div className="relative border border-white/[.2] rounded-full bg-black lg:w-12 lg:h-12 w-8 h-8 me-4">
-                                    <Image src={item.icon} alt="icon5" className="p-1" fill />
+                {items?.map((item, idx) => {
+                    const Icon = Icons[item as keyof typeof Icons];
+                    return (
+                        <li className=" relative rounded-2xl pr-8 " key={idx}>
+                            <blockquote>
+                                <div className="relative z-20 my-6 mr-16 flex flex-row items-center">
+                                    {/* add this div for the profile img */}
+                                    <div className="relative border border-white/[.2] rounded-full bg-black w-12 h-12  me-4 flex justify-center items-center">
+                                        {Icon ? <Icon /> : null}
+                                    </div>
+                                    <span className="text-xl font-semibold leading-[1.6] text-white capitalize">
+                                        {item}
+                                    </span>
                                 </div>
-                                <span className="text-xl font-semibold leading-[1.6] text-white">{item.title}</span>
-                            </div>
-                        </blockquote>
-                    </li>
-                ))}
+                            </blockquote>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     );
