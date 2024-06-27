@@ -5,6 +5,7 @@ import { useState } from "react";
 import { projects } from "@/data";
 import { FaArrowRight, FaLocationArrow } from "react-icons/fa6";
 import Image from "next/image";
+import { Icons } from "./icons";
 
 export const RecentProjects = () => {
     let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -73,17 +74,20 @@ export const RecentProjects = () => {
 
                                     <div className="flex items-center  justify-between ">
                                         <div className="flex items-center">
-                                            {item.iconLists.map((icon, index) => (
-                                                <div
-                                                    key={index}
-                                                    className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                                                    style={{
-                                                        transform: `translateX(-${5 * index}px)`,
-                                                    }}
-                                                >
-                                                    <Image src={icon} alt="icon5" className="p-2" fill />
-                                                </div>
-                                            ))}
+                                            {item.iconLists.map((icon, index) => {
+                                                const Icon = Icons[icon as keyof typeof Icons];
+                                                return (
+                                                    <div
+                                                        key={index}
+                                                        className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                                                        style={{
+                                                            transform: `translateX(-${5 * index}px)`,
+                                                        }}
+                                                    >
+                                                        {Icon ? <Icon /> : null}
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
 
                                         <div className="flex justify-center items-center">

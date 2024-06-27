@@ -1,21 +1,17 @@
 "use client";
 import React from "react";
 
-import { workExperience } from "@/data";
-import { Button } from "./ui/MovingBorders";
-import { TracingBeam } from "./ui/tracing-beam";
-import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
-const dummyContent = [
+const workExperience = [
     {
         title: "Junior-Prep",
         description: (
             <>
                 <p>
                     I initiated and led the development of junior-prep.com, an open-source platform designed to support
-                    junior web developers to practice interview questions, record your progress and find teams to
+                    junior web developers to practice interview questions, record thier progress and find teams to
                     collaborate with.
                 </p>
                 <h3 className="my-4 font-semibold">What i did:</h3>
@@ -43,6 +39,7 @@ const dummyContent = [
                     fill
                     className="object-cover object-left-top"
                     alt="linear board demo"
+                    sizes="100vw, (max-width: 768px) 620px"
                 />
             </div>
         ),
@@ -190,7 +187,7 @@ const Experience = () => {
     return (
         <div className=" mb-48 static " id="experience">
             <h1 className="heading mb-20">👷‍♂️💼 work experience</h1>
-            <StickyScroll content={dummyContent} />
+            <StickyScroll content={workExperience} />
         </div>
     );
 };
