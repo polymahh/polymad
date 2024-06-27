@@ -79,11 +79,11 @@ const Grid = () => {
                     <div className={`h-full `}>
                         <div className="group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 justify-center max-w-full  text-center">
                             <div className={`font-sans text-center text-lg lg:text-3xl font-bold z-10`}>
-                                Do you want to start a project together?
+                                Let&apos;s create something amazing together!
                             </div>
                             <div className="mt-5 relative self-center">
                                 <MagicButton
-                                    title={"let's get in touch"}
+                                    title={"Contact me today!"}
                                     icon={<TbMessage />}
                                     position="left"
                                     handleClick={() => console.log()}

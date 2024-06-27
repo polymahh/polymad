@@ -19,10 +19,10 @@ const Footer = () => {
                     Othmane Elkantaoui <span className="text-purple">Frontend</span> Developer
                 </h1>
                 <p className="text-white-200 md:mt-10 my-5 text-center">
-                    Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
+                    Have a project in mind? or Looking for a skilled frontend developer?
                 </p>
                 <a href="mailto:otman.elkantaoui@gmail.com">
-                    <MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right" />
+                    <MagicButton title="Contact me today!" icon={<FaLocationArrow />} position="right" />
                 </a>
             </div>
             <div className="flex mt-16  flex-col items-center">
