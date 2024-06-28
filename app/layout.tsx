@@ -1,14 +1,38 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
-
+import { siteConfig } from "@/lib/config";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "PolyMad Dev",
-    description: "PolyMad Portfolio | Next.js",
+    title: {
+        default: siteConfig.name,
+        template: `%s - ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
+    metadataBase: new URL(siteConfig.url),
+    openGraph: {
+        title: siteConfig.name,
+        description: siteConfig.description,
+        url: siteConfig.url,
+        siteName: siteConfig.name,
+        images: [
+            {
+                url: "/thumbnail.webp",
+                width: 600,
+                height: 400,
+            },
+        ],
+        locale: "en-US",
+        type: "website",
+    },
+    icons: {
+        icon: "/favicon.ico",
+        shortcut: "/favicon-16x16.png",
+        apple: "/apple-touch-icon.png",
+    },
 };
 
 export default function RootLayout({
@@ -22,6 +46,7 @@ export default function RootLayout({
                 <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
+                <Analytics />
             </body>
         </html>
     );

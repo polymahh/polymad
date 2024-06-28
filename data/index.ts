@@ -22,7 +22,7 @@ export const stack = [
     "git",
     "nodeJs",
     "react query",
-    // "expressJs",
+    "expressJs",
     "prisma",
 ];
 
@@ -49,14 +49,14 @@ export const projects = [
         des: "A beautifully designed portfolio for an architect. It's fully responsive and fully dynamic.",
         img: "/yassmina-portfolio.webp",
         iconLists: ["next.js", "tailwindcss", "swiperjs", "framer-motion", "contentful"],
-        link: "/ui.aiimg.com",
+        link: "https://archi-portfolio.vercel.app/projects",
     },
     {
         id: 4,
         title: "TubeGiffer - Youtube Gifs Generator",
         des: "A fun personel project that helps users create clips from youtube videos without downloading the video",
         img: "/tubegiffer.webp",
-        iconLists: ["nodeJs", "react", "tailwindcss", "expressjs", "ffmpeg"],
+        iconLists: ["nodeJs", "react", "tailwindcss", "expressJs", "ffmpeg"],
         link: "https://tubegiffer.vercel.app/",
     },
 ];
