@@ -54,10 +54,10 @@ export const projects = [
     {
         id: 4,
         title: "TubeGiffer - Youtube Gifs Generator",
-        des: "A fun personel project that helps users create clips from youtube videos without downloading the video",
+        des: "A fun personal project that helps users create clips from youtube videos without downloading the video",
         img: "/tubegiffer.webp",
         iconLists: ["nodeJs", "react", "tailwindcss", "expressJs", "ffmpeg"],
-        link: "https://tubegiffer.vercel.app/",
+        link: "https://youtubememe.com/",
     },
 ];
 
