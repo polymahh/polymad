@@ -7,6 +7,7 @@ import Link from "next/link";
 import { TextRevealCard, TextRevealCardDescription, TextRevealCardTitle } from "./ui/text-reveal-card";
 import { socialMedia } from "@/data";
 import { Icons } from "./icons";
+import { FileDown, FileText } from "lucide-react";
 
 function Hero() {
     return (
@@ -61,6 +62,14 @@ function Hero() {
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg ">
                         Hi! I&apos;m Othmane a Frontend Developer 👨‍💻 based in Morocco.
                     </p>
+                    <a href="/othmane_elkantaoui_2024.pdf" download>
+                        <MagicButton
+                            title={"Download CV"}
+                            icon={<FileDown />}
+                            position="right"
+                            otherClasses="!bg-[#161A31]"
+                        />
+                    </a>
                 </div>
             </div>
 

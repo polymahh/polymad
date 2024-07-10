@@ -3,11 +3,10 @@ import Image from "next/image";
 import GridGlobe from "./ui/GridGlobe";
 import MagicButton from "./MagicButton";
 import { TbMessage } from "react-icons/tb";
-import Link from "next/link";
-import { socialMedia } from "@/data";
-import { Icons } from "./icons";
+import { useRouter } from "next/navigation";
 
 const Grid = () => {
+    const router = useRouter();
     return (
         <section id="about" className="mb-20">
             <div
@@ -32,20 +31,24 @@ const Grid = () => {
                         <div className="aspect-[4/3] w-[80%] left-[50%] translate-x-[-50%] top-[40%] lg:top-[65%] absolute">
                             <Image
                                 src="/jp-dashboard.webp.png"
-                                alt="/b1.svg"
+                                alt="junior prep"
                                 fill
                                 className="object-cover object-left  w-full h-full"
                             />
                         </div>
 
-                        <div className="group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 justify-center md:justify-start lg:justify-center">
+                        <a
+                            href="https://junior-prep.com"
+                            target="_blank"
+                            className="group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 justify-center md:justify-start lg:justify-center"
+                        >
                             <div className="font-sans font-extralight md:max-w-32  md:text-base text-sm text-foreground z-10 whitespace-nowrap">
                                 🚧 What are you working on?
                             </div>
                             <div className={`font-sans text-xl md:text-3xl max-w-96 font-bold z-10`}>
                                 Currently building an open source project
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 {/* second item in the grid */}
@@ -82,13 +85,14 @@ const Grid = () => {
                                 Let&apos;s create something amazing together!
                             </div>
                             <div className="mt-5 relative self-center">
-                                <MagicButton
-                                    title={"Contact me today!"}
-                                    icon={<TbMessage />}
-                                    position="left"
-                                    handleClick={() => console.log()}
-                                    otherClasses="!bg-[#161A31]"
-                                />
+                                <a href="mailto:otman.elkantaoui@gmail.com">
+                                    <MagicButton
+                                        title={"Contact me today!"}
+                                        icon={<TbMessage />}
+                                        position="left"
+                                        otherClasses="!bg-[#161A31]"
+                                    />
+                                </a>
                             </div>
                         </div>
                     </div>
