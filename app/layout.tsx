@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import { siteConfig } from "@/lib/config";
+import { GoogleAnalytics } from "nextjs-google-analytics";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

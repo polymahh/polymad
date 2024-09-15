@@ -8,6 +8,7 @@ import { TextRevealCard, TextRevealCardDescription, TextRevealCardTitle } from "
 import { socialMedia } from "@/data";
 import { Icons } from "./icons";
 import { FileDown, FileText } from "lucide-react";
+import { event } from "nextjs-google-analytics";
 
 function Hero() {
     return (
@@ -45,6 +46,12 @@ function Hero() {
                         href="https://junior-prep.com"
                         target="_blank"
                         className="text-xs sm:text-sm text-center text-blue-100  bg-fuchsia-700 whitespace-nowrap px-2 sm:px-4 py-1 rounded-full"
+                        onClick={() => {
+                            event("junior-prep_click", {
+                                category: "projects",
+                                label: "junior-prep",
+                            });
+                        }}
                     >
                         👋 checkout my OPEN SOURCE project --&gt;
                     </Link>
@@ -62,7 +69,7 @@ function Hero() {
                     <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg ">
                         Hi! I&apos;m Othmane a Frontend Developer 👨‍💻 based in Morocco.
                     </p>
-                    <a href="/othmane_elkantaoui_2024.pdf" download>
+                    <a href="/othmane_elkantaoui_2024_8.pdf" download>
                         <MagicButton
                             title={"Download CV"}
                             icon={<FileDown />}
