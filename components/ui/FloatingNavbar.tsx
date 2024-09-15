@@ -87,20 +87,23 @@ export const FloatingNav = ({
                         delay: 0.8,
                         duration: 0.2,
                     }}
-                    onClick={() => scrollTo("about")}
+                    // onClick={() => scrollTo("about")}
                     className={cn(
                         "hidden sm:block relative h-16 aspect-square rounded-full overflow-hidden  trasition-all",
                         isTop ? "visible mr-10" : "invisible mr-0"
                     )}
                 >
-                    <Image
-                        src={"/aii.png"}
-                        alt="about"
-                        sizes="64px"
-                        fill
-                        className="object-cover object-top antialiased"
-                    />
+                    <Link href="https://github.com/polymahh" target="_blank">
+                        <Image
+                            src={"/polymad.jpg"}
+                            alt="about"
+                            sizes="64px"
+                            fill
+                            className="object-cover object-top antialiased"
+                        />
+                    </Link>
                 </motion.div>
+
                 {navItems.map((navItem: any, idx: number) =>
                     navItem.name === "Contact" ? (
                         <Link
